@@ -1,0 +1,33 @@
+# Binaries and build artifacts
+/build/
+main
+*.exe
+*.out
+*.o
+
+# Go modules and dependencies
+vendor/
+go.sum
+go.work
+go.work.sum
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.iml
+
+# Docker-related files (if running locally)
+.dockerignore
+docker-compose.override.yml
+
+# Environment files (sensitive data)
+.env
+
+# Redis database files (if storing data locally)
+dump.rdb
