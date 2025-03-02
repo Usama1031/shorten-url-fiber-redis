@@ -105,7 +105,7 @@ func ShortenURL(c *fiber.Ctx) error {
 		URL:             body.URL,
 		CustomShort:     "",
 		Expiry:          body.Expiry,
-		XRateRemaining:  10,
+		XRateRemaining:  15,
 		XRateLimitReset: 30,
 	}
 

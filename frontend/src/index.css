@@ -191,7 +191,7 @@ h2 {
   font-family: inherit;
   border-radius: 0.5rem;
   border: none;
-  padding-left: 1rem;
+  padding: 1rem;
 }
 
 .shorten__content .form input::placeholder {
@@ -211,6 +211,8 @@ h2 {
   background-color: var(--clr-neutral-100);
   padding-block: 1.5rem;
   border-radius: 0.5rem;
+  padding-left: 1rem;
+
 }
 
 .shorten .shorten__card .actual-link {
@@ -223,6 +225,7 @@ h2 {
 .shorten .shorten__card .shorten__link {
   padding-top: 1rem;
   padding-inline: 1rem;
+  margin-left: 1rem;
 }
 
 .shorten .shorten__card .shorten__link a {
@@ -260,6 +263,20 @@ input.error-input::placeholder {
   font-style: italic;
 }
 
+/* copy button styles */
+
+.copy-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: var(--clr-primary-400);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
 /* Media query - Tablet and up */
 @media (min-width: 768px) {
   .container {
@@ -293,8 +310,10 @@ input.error-input::placeholder {
   }
 
   .nav__inner {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 3rem;
   }
 
@@ -361,10 +380,12 @@ input.error-input::placeholder {
   }
 
   .shorten .shorten__card .shorten__link {
+    width: 100%;
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
+    /* gap: 5rem; */
     padding-right: 1rem;
   }
 

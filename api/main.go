@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/joho/godotenv"
 	"github.com/usama1031/shorten-url-fiber-redis-api/routes"
@@ -27,7 +28,13 @@ func main() {
 
 	app.Use(logger.New())
 
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "http://localhost:8080, http://frontend:8080",
+		AllowHeaders: "Origin, Content-Type, Accept",
+		AllowMethods: "GET, POST, PUT, DELETE, OPTIONS",
+	}))
+
 	setupRoutes(app)
 
-	log.Fatal(app.Listen(os.Getenv("APP_PORT")))
+	log.Fatal(app.Listen("0.0.0.0" + os.Getenv("APP_PORT")))
 }

@@ -1,5 +1,3 @@
-import Logo from "../assets/logo.svg";
-
 const Header = () => {
   return (
     <header className="header">
@@ -9,7 +7,11 @@ const Header = () => {
           <div className="nav__inner">
             {/* Logo */}
             <a href="#" className="logo">
-              <img src={Logo} alt="Logo" />
+              <img src="/golang.png" alt="Logo" />
+            </a>
+            <span>+</span>
+            <a href="#" className="logo">
+              <img src="/logo.svg" alt="Logo" />
             </a>
           </div>
         </nav>
