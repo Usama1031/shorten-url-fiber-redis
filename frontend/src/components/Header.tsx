@@ -7,7 +7,7 @@ const Header = () => {
           <div className="nav__inner">
             {/* Logo */}
             <a href="#" className="logo">
-              <img src="/golang.png" alt="Logo" />
+              <img src="/go.png" alt="Logo" />
             </a>
             <span>+</span>
             <a href="#" className="logo">
